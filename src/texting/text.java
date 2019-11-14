@@ -5,7 +5,7 @@ public class text
 
 	public static void main(String[] args) 
 	{
-		Suanshi();
+		reckon();
 	}
 	public static List<Integer>
 	getRandomNumList(int nums,int star,int end)
@@ -24,7 +24,7 @@ public class text
 		}
 		return list;
 	}
-	private static void Suanshi()
+	private static void reckon()
 	{//计算算式
 		List<Integer>list1=getRandomNumList(50,0,100);
 		Random random1=new Random();
@@ -45,7 +45,7 @@ public class text
 					System.out.print(""+j);
 					System.out.println("=");
 					boolean isTrue=false;
-					int answer=0,answerPeople=0;
+					int answer=0,question=0;
 					if(array[k]=='+')
 					{//判断输入答案是否正确
 						answer=i+j;
@@ -56,8 +56,8 @@ public class text
 						answer=i-j;
 					}
 					Scanner s=new Scanner(System.in);
-					answerPeople=s.nextInt();
-					if(answer==answerPeople)
+					question=s.nextInt();
+					if(answer==question)
 					{
 						System.out.println("回答正确！");
 					}
